@@ -8,8 +8,8 @@ self.addEventListener("install", (event) => {
           "/app.js",
           "/favicon.ico",
           "/logo.png",
-          "/public/img/logo.png",
-          "/public/img/logo.png",
+          "/public/logo.png",
+          "/public/logo.png",
           "/public/splash-screen.html",
         ]);
       })
@@ -27,9 +27,9 @@ self.addEventListener("install", (event) => {
   self.addEventListener("push", (event) => {
     const options = {
       body: event.data ? event.data.text() : "Nueva notificación",
-      icon: "/public/icons/icon-192x192.png",
+      icon: "/public/logo.png",
       vibrate: [200, 100, 200],
     };
-    event.waitUntil(self.registration.showNotification("PWA Lista de Tareas", options));
+    event.waitUntil(self.registration.showNotification("Lista de Tareas", options));
   });
   

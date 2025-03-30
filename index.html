@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tareas</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="public/manifest.json">
+  <link rel="icon" type="image/png" href="/public/img/logo.png">
+</head>
+<body>
+    <header>
+    <img src="/public/img/logo.png" alt="Logotipo de PWA Lista de Tareas" />
+  </header>
+  <div class="main-container">
+
+    <h1 id="titulo">Lista de Tareas</h1>
+
+    <div class="input-container">
+      <input type="text" id="nuevaTarea" placeholder="Escribe una nueva tarea">
+      <button onclick="agregarTarea()">Agregar tarea</button>
+    </div>
+
+    <ul id="listaTareas"></ul>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    
+    const titulo = document.getElementById('titulo');
+    titulo.innerHTML = "¡Bienvenido a tu lista de tareas!";  // Aquí puedes cambiar el título de forma dinámica según tu preferencia.
+
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("public/sw.js")
+        .then(() => console.log("Service Worker registrado"))
+        .catch((error) => console.log("Error registrando SW:", error));
+    }
+  </script>
+</body>
+</html>

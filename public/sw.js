@@ -27,7 +27,7 @@ self.addEventListener("install", (event) => {
   self.addEventListener("push", (event) => {
     const options = {
       body: event.data ? event.data.text() : "Nueva notificación",
-      icon: "/public/logo.png",
+      icon: "logo.png",
       vibrate: [200, 100, 200],
     };
     event.waitUntil(self.registration.showNotification("Lista de Tareas", options));

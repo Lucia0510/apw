@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-    <img src="/public/img/logo.png" alt="Logotipo de PWA Lista de Tareas" />
+    <img src="/public/logo.png" alt="Logotipo de Lista de Tareas" />
   </header>
   <div class="main-container">
 
@@ -28,7 +28,7 @@
   <script>
     
     const titulo = document.getElementById('titulo');
-    titulo.innerHTML = "¡Bienvenido a tu lista de tareas!";  // Aquí puedes cambiar el título de forma dinámica según tu preferencia.
+    titulo.innerHTML = "¡Bienvenido a tu lista de tareas!"; 
 
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("public/sw.js")

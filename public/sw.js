@@ -8,8 +8,8 @@ self.addEventListener("install", (event) => {
           "/app.js",
           "/favicon.ico",
           "/logo.png",
-          "/public/logo.png",
-          "/public/logo.png",
+          "logo.png",
+          "logo.png",
           "/public/splash-screen.html",
         ]);
       })
